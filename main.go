@@ -6,11 +6,13 @@ import (
 	"net/http"
 
 	"github.com/Aman913k/STOCKSAPI/database"
+	"github.com/Aman913k/STOCKSAPI/login"
 	"github.com/Aman913k/STOCKSAPI/router"
 )
 
 func main() {
 	r := router.Router()
+	login.Login("Aman")
 
 	db := database.GetConnection()
 	defer db.Close()
